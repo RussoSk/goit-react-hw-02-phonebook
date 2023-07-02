@@ -24,7 +24,6 @@ export class ContactForm extends Component {
   
     render() {
       const { name, number } = this.state;
-      const { contacts } = this.props;
   
       return (
         <form onSubmit={this.handleSubmit} className={css.formSub}>
@@ -54,7 +53,7 @@ export class ContactForm extends Component {
             />
           </label>
           <br />
-          <button className= {css.formBtn} type="submit" disabled={name.length === 0}>
+          <button className= {css.formBtn} type="submit" disabled={name === '' || number === ''}>
             Add contact
           </button>
         </form>
@@ -64,5 +63,5 @@ export class ContactForm extends Component {
 
   ContactForm.propTypes = {
     onAddContact: PropTypes.func.isRequired,
-    contacts: PropTypes.array.isRequired,
+    
   };

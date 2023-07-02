@@ -30,3 +30,21 @@ ContactList.propTypes = {
   ).isRequired,
   onDeleteContact: PropTypes.func.isRequired,
 };
+
+
+
+
+// export const ContactList = ({ contacts, onDeleteContact }) => {
+//   return (
+//     <ul className={css.contactList}>
+//       {contacts.map((contact) => (
+//         <li key={contact.id} className={css.contactItem}>
+//           {contact.name} : <span>{contact.number}</span>
+//           <button onClick={() => onDeleteContact(contact.id)} className={css.ContactBtn}>
+//             Delete
+//           </button>
+//         </li>
+//       ))}
+//     </ul>
+//   );
+// };
